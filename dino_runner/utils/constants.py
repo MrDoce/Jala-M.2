@@ -41,12 +41,12 @@ FLY_JUMP = pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario
 DUCK = pygame.image.load(os.path.join(IMG_DIR, "Mario/maro_duck.png"))
 MARIO_FLY = pygame.image.load(os.path.join(IMG_DIR, "Mario/mario_fly.png"))
 MARIO_RUN = pygame.image.load(os.path.join(IMG_DIR, "Mario/mario_run.png"))
-MARIO_RUN_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "power_ups/mecha.png"))
+MARIO_RUN_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "power_ups/mecha_consertado.png"))
 JUMPING = pygame.image.load(os.path.join(IMG_DIR, "Mario/MarioSprit.png")).subsurface((0, 194),(100, 97))
 JUMPING_SHIELD = pygame.transform.scale2x(pygame.image.load(os.path.join(IMG_DIR, "power_ups/mecajump.png")))
 JUMPING_HAMMER = pygame.image.load(os.path.join(IMG_DIR, "Mario/MarioSprit.png")).subsurface((300, 388),(100, 97))
 DUCKING_SHIELD =[ pygame.transform.scale(pygame.image.load(os.path.join(IMG_DIR, "Mario/marioKart.png")), (96 * 0.7, 100 * 0.7))]
-MARIO_HAMMER  = pygame.image.load(os.path.join(IMG_DIR, "Mario/mario_hammer.png"))
+MARIO_HAMMER  = pygame.image.load(os.path.join(IMG_DIR, "power_ups/mario_hammer_consertado2.png"))
 TARTARUGAM =  pygame.image.load(os.path.join(IMG_DIR, "obstaculo/tartarugaM.png"))
 TOPEDOS =  pygame.image.load(os.path.join(IMG_DIR, "obstaculo/torpedoS.png"))
 DRAGAO1 =  pygame.image.load(os.path.join(IMG_DIR, "obstaculo/dragao.png"))
@@ -103,8 +103,8 @@ SOUNDS ={
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
-HAMMER_TYPE = "hammer"
-RELOGIO_TYPE = "time"
+HAMMER_TYPE = "martelo"
+RELOGIO_TYPE = "relógio"
 PENA_TYPE = "Pena"
 HEART_TYPE = "heart"
 

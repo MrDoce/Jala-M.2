@@ -29,7 +29,6 @@ class Game:
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
         self.power_up_manager = PowerUpManager()
-        self.score = 0
 
         self.music(START_MUSIC, volume= 0.9)
 
@@ -66,8 +65,6 @@ class Game:
         self.obstacle_manager.update(self)
         self.update_score()
         self.power_up_manager.update(self.score, self.game_speed, self.player, self)
-
-        
 
     def update_score(self):
         self.score += 1
@@ -118,26 +115,25 @@ class Game:
             draw_message_component(
                 f"Score: {self.score}",
                 self.screen,
-                font_color=(0,100,139),
-                pos_x_center=1000,
-                pos_y_center=50
-
-            )   
-            draw_message_component(
-                f"Best Score: {self.best_score}",
-                self.screen,
-                font_color=(0,100,139),
+                font_color=(0,0,0),
                 pos_x_center=1000,
                 pos_y_center=80
-)
-            
+            )
+
+            draw_message_component(
+                f"Maior pontuação: {self.best_score}",
+                self.screen,
+                pos_y_center= 60,
+                pos_x_center=925,
+                font_color= (0, 0, 0)
+            )
           
     def draw_power_up_time(self):
         if self.player.has_power_up: 
             time_to_show = round((self.player.power_up_time - pygame.time.get_ticks()) / 1000, 2)
             if time_to_show >= 0:
                 draw_message_component(
-                    f"{self.player.type.capitalize()} enabled for {time_to_show} seconds",
+                    f"{self.player.type.capitalize()} enabled for {time_to_show} segundos",
                     self.screen,
                     font_size = 18,
                     pos_x_center = 500,
@@ -204,19 +200,21 @@ class Game:
             draw_message_component(
                 f"Sua pontuação: {self.score}",
                 self.screen,
-                pos_y_center= half_screen_heigth - 70
+                pos_y_center= half_screen_heigth - 60,
+                font_color= (255,255,255)
             )
 
             draw_message_component(
                 f"Maior pontuação: {self.best_score}",
                 self.screen,
-                pos_y_center= half_screen_heigth - 100
+                pos_y_center= half_screen_heigth - 90,
+                font_color= (255,255,255)
             )
 
             draw_message_component(
                 f"Mortes: {self.death_count}",
                 self.screen,
-                font_color=(0,0,0),
+                font_color=(255,255,255),
                 pos_x_center=550,
                 pos_y_center=270
                         )   
